@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- PROJETO TURMA B -->
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+	<head>
+		<title>Edição de tarefa</title>
+		<meta charset="UTF-8"/>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<script src="/js/bootstrap.bundle.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	
+		
+	</head>
+	<body class="bg-info">
+		<div class="container">
+			<header>
+				<h2>Editar tarefa</h2>
+				<br>
+				
+				<form th:object="${tarefa}" method="post" th:action="@{/adicionar}">
+					<input type="hidden" th:field="*{id}">
+					<label for="fname" >Nome da Tarefa: </label>
+					<input type="text" id="NomeTarefa" name="nomeTarefa" th:field="*{nomeTarefa}" >
+					<input type="submit" class="btn btn-success" value="Atualizar">
+				</form>
+				
+				<br><br>
+			</header>
+			
+			<section>
+			
+				
+		
+			</section>
+		</div>
+	</body>
+</html>
